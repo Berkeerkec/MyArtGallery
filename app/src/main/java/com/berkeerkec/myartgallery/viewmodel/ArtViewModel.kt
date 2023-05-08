@@ -50,9 +50,9 @@ class ArtViewModel @Inject constructor(
     fun makeArt(name : String, artistName : String, year : String){
         if (name.isEmpty() || artistName.isEmpty() || year.isEmpty()){
             insertArtMsg.postValue(Resource.error("Enter name, artist name and year!",null))
-
             return
         }
+
         val yearInt = try {
             year.toInt()
         }catch (e : Exception){
